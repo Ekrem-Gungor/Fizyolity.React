@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, html {
+    overflow-x: hidden; /* Yatay kaydırmayı önlemek için */
+    background-color: var(--fzylty-color); /* Header dışı görünüm için arka plan rengi */
+    background-image: url('/img/body/Background.webp');
+    font-family: Arial, Helvetica, sans-serif; /* Yazı tipi ayarı */
+    background-repeat: repeat;
+    scroll-behavior: smooth;
+}
+
+.spacer {
+    height: 150px; /* Boşluk genişliğini ayarlayın */
+    width: 100%; /* Tam genişlik için */
+}
+
+:root {
+    --fzylty-color: #3f9c9f;
+    --fzylty-hover-color: #54b5ba;
+}
