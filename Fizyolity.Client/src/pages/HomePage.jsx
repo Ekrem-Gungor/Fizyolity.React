@@ -1,3 +1,7 @@
+import { useEffect } from "react";
+import { scroller } from "react-scroll";
+import { useSearchParams } from "react-router-dom";
+
 import Head from "@/components/defaultLayout/Head";
 import AboutUsSection from "@/components/main/AboutUsSection";
 import BlogSection from "@/components/main/BlogsSection";
@@ -11,6 +15,20 @@ import ServicesSection from "@/components/main/ServicesSection";
 import VideosSection from "@/components/main/VideosSection";
 
 export default function HomePage() {
+  const [searchParams] = useSearchParams();
+  const targetSection = searchParams.get("section");
+
+  useEffect(() => {
+    if (targetSection) {
+      scroller.scrollTo(targetSection, {
+        duration: 800,
+        delay: 0,
+        smooth: "easeInOutQuart",
+        offset: -80, // sticky header yüksekliği kadar
+      });
+    }
+  }, [targetSection]);
+
   return (
     <>
       <Head

@@ -6,9 +6,25 @@ import {
 } from "react-icons/fa6";
 import { Link } from "react-router";
 import { ROUTES } from "@/router/index";
-import { Link as ScrollLink } from "react-scroll";
+import { useNavigate, useLocation } from "react-router-dom";
+import { scroller } from "react-scroll";
 
 export default function Footer() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavClick = (sectionId) => {
+    const isOnHome = location.pathname === "/";
+    if (isOnHome) {
+      scroller.scrollTo(sectionId, {
+        duration: 800,
+        delay: 0,
+        smooth: "easeInOutQuart",
+      });
+    } else {
+      navigate(`/?section=${sectionId}`);
+    }
+  };
   return (
     <footer className="bg-zinc-800 text-white py-10">
       <div className="container mx-auto px-4">
@@ -28,38 +44,23 @@ export default function Footer() {
                   Anasayfa
                 </Link>
               </li>
-              <li>
-                <ScrollLink
-                  to="about"
-                  smooth={true}
-                  duration={500}
-                  offset={-100}
-                  className="hover:text-fizyolity cursor-pointer transition"
-                >
-                  Biz Kimiz?
-                </ScrollLink>
+              <li
+                onClick={() => handleNavClick("about")}
+                className="hover:text-fizyolity cursor-pointer transition"
+              >
+                Hakkımızda
               </li>
-              <li>
-                <ScrollLink
-                  to="services"
-                  smooth={true}
-                  duration={500}
-                  offset={-100}
-                  className="hover:text-fizyolity cursor-pointer transition"
-                >
-                  Hizmetlerimiz
-                </ScrollLink>
+              <li
+                onClick={() => handleNavClick("services")}
+                className="hover:text-fizyolity cursor-pointer transition"
+              >
+                Hizmetlerimiz
               </li>
-              <li>
-                <ScrollLink
-                  to="blogs"
-                  smooth={true}
-                  duration={500}
-                  offset={-100}
-                  className="hover:text-fizyolity cursor-pointer transition"
-                >
-                  Blog
-                </ScrollLink>
+              <li
+                onClick={() => handleNavClick("blogs")}
+                className="hover:text-fizyolity cursor-pointer transition"
+              >
+                Blog
               </li>
               <li>
                 <Link
@@ -69,38 +70,23 @@ export default function Footer() {
                   Fizyolity Youtube
                 </Link>
               </li>
-              <li>
-                <ScrollLink
-                  to="gallery"
-                  smooth={true}
-                  duration={500}
-                  offset={-100}
-                  className="hover:text-fizyolity cursor-pointer transition"
-                >
-                  Galeri
-                </ScrollLink>
+              <li
+                onClick={() => handleNavClick("gallery")}
+                className="hover:text-fizyolity cursor-pointer transition"
+              >
+                Galeri
               </li>
-              <li>
-                <ScrollLink
-                  to="events"
-                  smooth={true}
-                  duration={500}
-                  offset={-100}
-                  className="hover:text-fizyolity cursor-pointer transition"
-                >
-                  Etkinlikler
-                </ScrollLink>
+              <li
+                onClick={() => handleNavClick("event")}
+                className="hover:text-fizyolity cursor-pointer transition"
+              >
+                Etkinlikler
               </li>
-              <li>
-                <ScrollLink
-                  to="ourteams"
-                  smooth={true}
-                  duration={500}
-                  offset={-100}
-                  className="hover:text-fizyolity cursor-pointer transition"
-                >
-                  Ekibimiz
-                </ScrollLink>
+              <li
+                onClick={() => handleNavClick("ourteams")}
+                className="hover:text-fizyolity cursor-pointer transition"
+              >
+                Ekibimiz
               </li>
             </ul>
           </div>

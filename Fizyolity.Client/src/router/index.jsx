@@ -2,11 +2,11 @@ import { createBrowserRouter } from "react-router-dom";
 import DefaultLayout from "../layouts/DefaultLayout";
 import AboutUsSection from "../components/main/AboutUsSection";
 import HomePage from "../pages/HomePage";
-import ServicesSection from "@/components/main/ServicesSection";
-import BlogsSection from "@/components/main/BlogsSection";
 import GallerySection from "@/components/main/GallerySection";
 import EventsSection from "@/components/main/EventsSection";
-import OurTeamSection from "@/components/main/OurTeamSection";
+import ServicesPage from "@/pages/ServicesPage";
+import BlogsPage from "@/pages/BlogsPage";
+import BlogDetailsPage from "@/pages/BlogDetailsPage";
 
 export const ROUTES = {
   HOME: "/",
@@ -44,11 +44,15 @@ const router = createBrowserRouter([
       },
       {
         path: "services",
-        element: <ServicesSection />,
+        element: <ServicesPage />,
       },
       {
         path: "blogs",
-        element: <BlogsSection />,
+        element: <BlogsPage />,
+      },
+      {
+        path: "blog/details/:slug",
+        element: <BlogDetailsPage />,
       },
       {
         path: "gallery",

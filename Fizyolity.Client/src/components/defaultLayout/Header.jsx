@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router";
-import { Link as ScrollLink } from "react-scroll";
+import { useNavigate, useLocation } from "react-router-dom";
+import { scroller } from "react-scroll";
 import { Typewriter } from "react-simple-typewriter";
 
 const typedWords = [
@@ -15,6 +16,8 @@ const typedWords = [
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   // Scroll olduğunda header efektleri vs.
   const handleScroll = () => {
@@ -29,6 +32,24 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleNavClick = (sectionId) => {
+    const isOnHome = location.pathname === "/";
+    if (isOnHome) {
+      scroller.scrollTo(sectionId, {
+        duration: 800,
+        delay: 0,
+        smooth: "easeInOutQuart",
+      });
+    } else {
+      navigate(`/?section=${sectionId}`);
+    }
+  };
+
+  const handleMobileOnclick = (sectionId, isShow) => {
+    handleNavClick(sectionId);
+    setShowSidebar(isShow);
+  };
 
   return (
     <header
@@ -46,71 +67,50 @@ export default function Header() {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex gap-6 text-white">
-          <ScrollLink
-            to="about"
-            smooth={true}
-            duration={500}
-            offset={-100}
+        <ul className="hidden md:flex gap-6 text-white">
+          <li
+            onClick={() => handleNavClick("about")}
             className="rounded-xl p-1 px-2 cursor-pointer hover:bg-white/20 hover:text-zinc-700 transition-all duration-400 easy-in-out"
           >
-            Biz Kimiz?
-          </ScrollLink>
-          <ScrollLink
-            to="services"
-            smooth={true}
-            duration={500}
-            offset={-100}
+            Hakkımızda
+          </li>
+          <li
+            onClick={() => handleNavClick("services")}
             className="rounded-xl p-1 px-2 cursor-pointer hover:bg-white/20 hover:text-zinc-700 transition-all duration-400 easy-in-out"
           >
             Hizmetlerimiz
-          </ScrollLink>
-          <ScrollLink
-            to="blogs"
-            smooth={true}
-            duration={500}
-            offset={-100}
+          </li>
+          <li
+            onClick={() => handleNavClick("blogs")}
             className="rounded-xl p-1 px-2 cursor-pointer hover:bg-white/20 hover:text-zinc-700 transition-all duration-400 easy-in-out"
           >
             Blogs
-          </ScrollLink>
-          <ScrollLink
-            to="gallery"
-            smooth={true}
-            duration={500}
-            offset={-100}
+          </li>
+          <li
+            onClick={() => handleNavClick("gallery")}
             className="rounded-xl p-1 px-2 cursor-pointer hover:bg-white/20 hover:text-zinc-700 transition-all duration-400 easy-in-out"
           >
             Galeri
-          </ScrollLink>
-          <ScrollLink
-            to="events"
-            smooth={true}
-            duration={500}
-            offset={-100}
+          </li>
+          <li
+            onClick={() => handleNavClick("events")}
             className="rounded-xl p-1 px-2 cursor-pointer hover:bg-white/20 hover:text-zinc-700 transition-all duration-400 easy-in-out"
           >
             Etkinlikler
-          </ScrollLink>
-          <ScrollLink
-            to="ourteams"
-            smooth={true}
-            duration={500}
-            offset={-100}
+          </li>
+          <li
+            onClick={() => handleNavClick("ourteams")}
             className="rounded-xl p-1 px-2 cursor-pointer hover:bg-white/20 hover:text-zinc-700 transition-all duration-400 easy-in-out"
           >
             Ekibimiz
-          </ScrollLink>
-          <ScrollLink
-            to="location"
-            smooth={true}
-            duration={500}
-            offset={-100}
+          </li>
+          <li
+            onClick={() => handleNavClick("contact")}
             className="rounded-xl p-1 px-2 cursor-pointer hover:bg-white/20 hover:text-zinc-700 transition-all duration-400 easy-in-out"
           >
             İletişim
-          </ScrollLink>
-        </div>
+          </li>
+        </ul>
 
         {/* Mobile Menu Button */}
         <button
@@ -145,82 +145,24 @@ export default function Header() {
               </svg>
             </button>
             <ul className="flex flex-col gap-4 mt-6 text-black">
-              <li>
-                <ScrollLink
-                  to="about"
-                  smooth={true}
-                  duration={500}
-                  offset={-100}
-                  onClick={() => setShowSidebar(false)}
-                >
-                  Biz Kimiz?
-                </ScrollLink>
+              <li onClick={() => handleMobileOnclick("about", false)}>
+                Hakkımızda
               </li>
-              <li>
-                <ScrollLink
-                  to="services"
-                  smooth={true}
-                  duration={500}
-                  offset={-100}
-                  onClick={() => setShowSidebar(false)}
-                >
-                  Hizmetlerimiz
-                </ScrollLink>
+              <li onClick={() => handleMobileOnclick("services", false)}>
+                Hizmetlerimiz
               </li>
-              <li>
-                <ScrollLink
-                  to="blogs"
-                  smooth={true}
-                  duration={500}
-                  offset={-100}
-                  onClick={() => setShowSidebar(false)}
-                >
-                  Blogs
-                </ScrollLink>
+              <li onClick={() => handleMobileOnclick("blogs", false)}>Blogs</li>
+              <li onClick={() => handleMobileOnclick("gallery", false)}>
+                Galeri
               </li>
-              <li>
-                <ScrollLink
-                  to="gallery"
-                  smooth={true}
-                  duration={500}
-                  offset={-100}
-                  onClick={() => setShowSidebar(false)}
-                >
-                  Galeri
-                </ScrollLink>
+              <li onClick={() => handleMobileOnclick("events", false)}>
+                Etkinlikler
               </li>
-              <li>
-                <ScrollLink
-                  to="events"
-                  smooth={true}
-                  duration={500}
-                  offset={-100}
-                  onClick={() => setShowSidebar(false)}
-                >
-                  Etkinlikler
-                </ScrollLink>
+              <li onClick={() => handleMobileOnclick("ourteams", false)}>
+                Ekibimiz
               </li>
-              <li>
-                <ScrollLink
-                  to="ourteams"
-                  smooth={true}
-                  duration={500}
-                  offset={-100}
-                  onClick={() => setShowSidebar(false)}
-                >
-                  Ekibimiz
-                </ScrollLink>
-              </li>
-              <li>
-                <ScrollLink
-                  to="location"
-                  smooth={true}
-                  duration={500}
-                  offset={-100}
-                  onClick={() => setShowSidebar(false)}
-                >
-                  İletişim
-                </ScrollLink>
+              <li onClick={() => handleMobileOnclick("contact", false)}>
+                İletişim
               </li>
             </ul>
           </div>
