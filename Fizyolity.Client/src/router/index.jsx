@@ -7,6 +7,7 @@ import EventsSection from "@/components/main/EventsSection";
 import ServicesPage from "@/pages/ServicesPage";
 import BlogsPage from "@/pages/BlogsPage";
 import BlogDetailsPage from "@/pages/BlogDetailsPage";
+import GalleryPage from "@/pages/GallerPage";
 
 export const ROUTES = {
   HOME: "/",
@@ -56,7 +57,7 @@ const router = createBrowserRouter([
       },
       {
         path: "gallery",
-        element: <GallerySection />,
+        element: <GalleryPage />,
       },
       {
         path: "events",
