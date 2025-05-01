@@ -1,9 +1,35 @@
 import Head from "@/components/defaultLayout/Head";
 import blogsData from "@/data/blogsData";
-import { RiArrowRightLine } from "react-icons/ri";
-import { Link } from "react-router";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
+import { useState } from "react";
+import BlogCard from "@/components/blogs/BlogCard";
 
 export default function BlogsPage() {
+  // Pagination için state
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 3; // Apiden alacağımız data verisi ile değiştirilebilir.
+
+  const totalItems = blogsData.length;
+  const totalPages = Math.ceil(totalItems / itemsPerPage); // Örnek toplam sayfa sayısı
+
+  const currentBlogs = blogsData.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
+  const handlePageChange = (page) => {
+    if (page >= 1 && page <= totalPages) {
+      setCurrentPage(page);
+    }
+  };
+
   return (
     <>
       <Head title="Blogs" />
@@ -12,54 +38,57 @@ export default function BlogsPage() {
           Blog Yazıları
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogsData.map((blog) => (
-            <div
-              key={blog.id}
-              className="bg-white/80 shadow-md rounded-2xl overflow-hidden hover:shadow-lg transition duration-400 ease-in-out"
-            >
-              <img
-                src={blog.coverImage}
-                alt={blog.title}
-                onError={(e) => {
-                  e.currentTarget.onerror = null;
-                  e.currentTarget.src = "/img/blogs/placeholder.webp";
-                }}
-                className="w-full h-48 object-cover will-change-loading"
-                loading="lazy"
-              />
-              <div className="p-5">
-                <h2 className="text-xl font-semibold text-gray-800 mb-2">
-                  {blog.title}
-                </h2>
-                <p className="text-sm mb-2">
-                  {new Date(blog.publishedDate).toLocaleDateString("tr-TR", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}{" "}
-                  · {blog.author}
-                </p>
-                <p className="mb-4">{blog.excerpt}</p>
-                <Link
-                  to={`/blog/details/${blog.slug}`}
-                  className="text-fizyolity hover:underline font-medium flex items-center"
-                >
-                  Devamını oku <RiArrowRightLine className="ml-1" />
-                </Link>
-                {/* Etiketler */}
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {blog.tags.map((tag, i) => (
-                    <span
-                      key={i}
-                      className="bg-fizyolity text-black/60 text-xs font-semibold px-2.5 py-0.5 rounded"
-                    >
-                      #{tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
+          {currentBlogs.map((blog) => (
+            <BlogCard key={blog.id} blog={blog} />
           ))}
+        </div>
+
+        <div className="flex flex-wrap sm:flex-nowrap justify-between items-center mt-10 px-2 gap-2">
+          <Pagination>
+            <PaginationContent>
+              <PaginationItem>
+                <PaginationPrevious
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handlePageChange(currentPage - 1);
+                  }}
+                  className="cursor-pointer border border-zinc-700 hover:border-zinc-900"
+                />
+              </PaginationItem>
+
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+                (page) => (
+                  <PaginationItem key={page}>
+                    <PaginationLink
+                      href="#"
+                      isActive={currentPage === page}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handlePageChange(page);
+                      }}
+                      className="cursor-pointer bg-white/50"
+                    >
+                      {page}
+                    </PaginationLink>
+                  </PaginationItem>
+                )
+              )}
+              <PaginationItem>
+                <PaginationNext
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handlePageChange(currentPage + 1);
+                  }}
+                  className="cursor-pointer border border-zinc-700 hover:border-zinc-900"
+                />
+              </PaginationItem>
+            </PaginationContent>
+          </Pagination>
+          <p className="text-sm text-muted-foreground whitespace-nowrap self-end sm:self-center">
+            {itemsPerPage} içerik / sayfa
+          </p>
         </div>
       </section>
     </>

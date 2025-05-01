@@ -30,7 +30,7 @@ export default function BlogDetailsPage() {
       <img
         src={blog.coverImage}
         alt={blog.title}
-        className="w-full h-72 object-cover rounded-xl mb-6 shadow will-change-loading"
+        className="w-full h-96 object-cover rounded-xl mb-6 shadow will-change-loading"
         onError={(e) => {
           console.log(
             `Resim yüklenemedi (${blog.coverImage}), placeholder gösterilecek!`

@@ -22,7 +22,7 @@ export default function ServicesSection() {
                 <h4 className="text-xl font-semibold mb-2">{service.title}</h4>
                 <p className=" mb-4">{service.description}</p>
                 <Link
-                  to={service.link}
+                  to={`/blog/details/${service.slug}`}
                   className="text-primary font-medium inline-flex items-center hover:underline"
                 >
                   Hakkında Blog <RiArrowRightLine className="ml-1" />

@@ -29,7 +29,7 @@ export default function BlogsSection() {
                 <h4 className="text-xl font-semibold mb-2">{blog.title}</h4>
                 <p className="mb-4 text-sm">{blog.excerpt}</p>
                 <Link
-                  to={blog.href}
+                  to={`/blog/details/${blog.slug}`}
                   className="font-medium inline-flex items-center hover:underline"
                 >
                   Daha fazla <RiArrowRightLine size={16} className="ml-1" />

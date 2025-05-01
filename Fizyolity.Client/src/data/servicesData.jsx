@@ -20,9 +20,9 @@ const servicesData = [
       <RiUserCommunityLine className="w-14 h-14 p-2 text-white bg-fizyolity rounded-full border border-white/60" />
     ),
     title: "Fizyoterapi Danışmanlığı",
+    slug: "fizyoterapiDanismanligi",
     description:
       "Fizyoterapi, hareket ve fonksiyonları geliştirmek, ağrıyı azaltmak ve genel yaşam kalitesini artırmak için uygulanan bir tedavi yöntemidir.",
-    link: "/blog/fizyoterapi-danismanligi",
   },
   {
     id: 2,
@@ -30,9 +30,9 @@ const servicesData = [
       <RiRestaurantLine className="w-14 h-14 p-2 text-white bg-fizyolity rounded-full border border-white/60" />
     ),
     title: "Beslenme Danışmanlığı",
+    slug: "beslenmeDanismanligi",
     description:
       "Sağlıklı ve dengeli bir yaşam için kişiye özel bir hizmettir. Yaş, sağlık durumu ve hedefler detaylı değerlendirilir.",
-    link: "/blog/beslenme-danismanligi",
   },
   {
     id: 3,
@@ -40,9 +40,9 @@ const servicesData = [
       <RiStethoscopeLine className="w-14 h-14 p-2 text-white bg-fizyolity rounded-full border border-white/60" />
     ),
     title: "İş Merkezlerine Sağlık Danışmanlığı",
+    slug: "isMerkezlerineSaglikDanismanligi",
     description:
       "İş yerinize özel, bütüncül sağlık danışmanlığı: fizyoterapi, beslenme ve psikolojik destek bir arada sunulur.",
-    link: "/blog/is-merkezlerine-saglik-danismanligi",
   },
   {
     id: 4,
@@ -50,7 +50,7 @@ const servicesData = [
       <FaNutritionix className="w-14 h-14 p-2 text-white bg-fizyolity rounded-full border border-white/60" />
     ),
     title: "Sporcu Beslenmesi",
-    link: "/blog/is-merkezlerine-saglik-danismanligi",
+    slug: "sporcuBeslenmesi",
   },
   {
     id: 5,
@@ -58,7 +58,7 @@ const servicesData = [
       <LiaBabyCarriageSolid className="w-14 h-14 p-2 text-white bg-fizyolity rounded-full border border-white/60" />
     ),
     title: "Gebelikte Beslenme",
-    link: "/blog/gebelikteleBeslenmesi",
+    slug: "gebelikteBeslenme",
   },
   {
     id: 6,
@@ -66,7 +66,7 @@ const servicesData = [
       <RiPsychotherapyLine className="w-14 h-14 p-2 text-white bg-fizyolity rounded-full border border-white/60" />
     ),
     title: "Manuel Terapi",
-    link: "/blog/manuelTerapi",
+    slug: "manuelTerapi",
   },
   {
     id: 7,
@@ -74,7 +74,7 @@ const servicesData = [
       <RiOpenArmLine className="w-14 h-14 p-2 text-white bg-fizyolity rounded-full border border-white/60" />
     ),
     title: "Klinik Pilates",
-    link: "/blog/klinikPilates",
+    slug: "klinikPilates",
   },
   {
     id: 8,
@@ -82,7 +82,7 @@ const servicesData = [
       <MdPregnantWoman className="w-14 h-14 p-1 text-white bg-fizyolity rounded-full border border-white/60" />
     ),
     title: "Hamileler İçin Pilates",
-    link: "/blog/hamilelerIcinPilates",
+    slug: "hamilelerIcinPilates",
   },
   {
     id: 9,
@@ -90,7 +90,7 @@ const servicesData = [
       <GrYoga className="w-14 h-14 p-2 text-white bg-fizyolity rounded-full border border-white/60" />
     ),
     title: "Yoga",
-    link: "/blog/yoga",
+    slug: "yoga",
   },
   {
     id: 10,
@@ -98,7 +98,7 @@ const servicesData = [
       <TbYoga className="w-14 h-14 p-2 text-white bg-fizyolity rounded-full border border-white/60" />
     ),
     title: "Swing Yoga",
-    link: "/blog/swingYoga",
+    slug: "swingYoga",
   },
   {
     id: 11,
@@ -106,7 +106,7 @@ const servicesData = [
       <RiWindyFill className="w-14 h-14 p-2 text-white bg-fizyolity rounded-full border border-white/60" />
     ),
     title: "Osteopati",
-    link: "/blog/osteopati",
+    slug: "osteopati",
   },
   {
     id: 12,
@@ -114,7 +114,7 @@ const servicesData = [
       <RiWeightLine className="w-14 h-14 p-2 text-white bg-fizyolity rounded-full border border-white/60" />
     ),
     title: "Fonksiyonel Egzersiz",
-    link: "/blog/fonksiyonelEgzersiz",
+    slug: "fonksiyonelEgzersiz",
   },
 ];
 

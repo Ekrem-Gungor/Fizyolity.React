@@ -1256,7 +1256,7 @@ const blogsData = [
     tags: ["Beslenme", "Danışmanlık", "Kişiye Özel"],
   },
   {
-    id: 19,
+    id: 20,
     title: "Fibromiyaljiniz Olabilir Mi?",
     slug: "fibromiyalji",
     author: "Fatma Çakıllı",
@@ -1397,7 +1397,7 @@ const blogsData = [
     tags: ["Beslenme", "Danışmanlık", "Kişiye Özel"],
   },
   {
-    id: 19,
+    id: 21,
     title: "Vestibüler Rehabilitasyon",
     slug: "vestibülerRehabilitasyon",
     author: "Fatma Çakıllı",
