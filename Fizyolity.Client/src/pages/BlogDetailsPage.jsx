@@ -33,7 +33,9 @@ export default function BlogDetailsPage() {
         className="w-full h-96 object-cover rounded-xl mb-6 shadow will-change-loading"
         onError={(e) => {
           e.currentTarget.onerror = null;
-          e.currentTarget.src = "/img/blogs/placeholder.webp";
+          e.currentTarget.src = `${
+            import.meta.env.BASE_URL
+          }img/blogs/placeholder.webp`;
         }}
         loading="lazy"
         decoding="async"

@@ -28,8 +28,9 @@ const blogsData = [
         </p>
       </>
     ),
-    coverImage:
-      "/img/blogs/fizyoterapiDanismanlik/fizyoterapi-danışmanlık.webp",
+    coverImage: `${
+      import.meta.env.BASE_URL
+    }img/blogs/fizyoterapiDanismanlik/fizyoterapi-danışmanlık.webp`,
     tags: ["Omurga", "Fizyoterapi", "Beden Sağlığı"],
     href: "/blog/fizyoterapi-danismanligi",
   },
@@ -65,8 +66,9 @@ const blogsData = [
         </p>
       </>
     ),
-    coverImage:
-      "/img/blogs/isMerkezlerineSaglikDanismanligi/is-merkezlerine.webp",
+    coverImage: `${
+      import.meta.env.BASE_URL
+    }img/blogs/isMerkezlerineSaglikDanismanligi/is-merkezlerine.webp`,
     tags: ["Danışmanlık", "Fizyoterapi", "Sağlık Danışmanlığı"],
     href: "/blog/beslenme-danismanligi",
   },
@@ -101,7 +103,9 @@ const blogsData = [
         </p>
       </>
     ),
-    coverImage: "/img/blogs/beslenmeDanismanligi/Beslenme-Danismanligi.webp",
+    coverImage: `${
+      import.meta.env.BASE_URL
+    }img/blogs/beslenmeDanismanligi/Beslenme-Danismanligi.webp `,
     tags: ["Beslenme", "Danışmanlık", "Kişiye Özel"],
     href: "/blog/beslenme-danismanligi",
   },
@@ -128,7 +132,9 @@ const blogsData = [
         </p>
       </>
     ),
-    coverImage: "/img/blogs/sporcuBeslenmesi/sporcu-beslenmesi.webp",
+    coverImage: `${
+      import.meta.env.BASE_URL
+    }img/blogs/sporcuBeslenmesi/sporcu-beslenmesi.webp`,
     tags: ["Beslenme", "Danışmanlık", "Kişiye Özel"],
     href: "/blog/beslenme-danismanligi",
   },
@@ -179,7 +185,9 @@ const blogsData = [
         </p>
       </>
     ),
-    coverImage: "/img/blogs/gebelikteBeslenme/gebelikte-beslenme.webp",
+    coverImage: `${
+      import.meta.env.BASE_URL
+    }img/blogs/gebelikteBeslenme/gebelikte-beslenme.webp`,
     tags: ["Beslenme", "Danışmanlık", "Kişiye Özel"],
     href: "/blog/beslenme-danismanligi",
   },
@@ -205,7 +213,9 @@ const blogsData = [
         </p>
       </>
     ),
-    coverImage: "/img/blogs/klinikPilates/klinik_pilates.webp",
+    coverImage: `${
+      import.meta.env.BASE_URL
+    }img/blogs/klinikPilates/klinik_pilates.webp`,
     tags: ["Beslenme", "Danışmanlık", "Kişiye Özel"],
     href: "/blog/beslenme-danismanligi",
   },
@@ -232,7 +242,9 @@ const blogsData = [
         </p>
       </>
     ),
-    coverImage: "/img/blogs/reformerPilates/reformer_pilates.webp",
+    coverImage: `${
+      import.meta.env.BASE_URL
+    }img/blogs/reformerPilates/reformer_pilates.webp`,
     tags: ["Beslenme", "Danışmanlık", "Kişiye Özel"],
     href: "/blog/beslenme-danismanligi",
   },
@@ -272,12 +284,6 @@ const blogsData = [
           veya yoga tercih edilebilir.
         </p>
 
-        {/* <img
-          src="/img/blogs/hamilelerIcinPilates/hamilelikte-egzersiz.webp"
-          alt="Hamilelik Blog Görseli"
-          className="article-content-image w-full rounded shadow-md my-4"
-          loading="lazy"
-        /> */}
         <h3>Peki Hamilelikte Egzersiz Güvenli Midir?</h3>
         <p>
           Amerikan jinekoloji ve obstetrik derneği egzersizin hamilelikte güveni
@@ -302,7 +308,9 @@ const blogsData = [
         </ul>
       </>
     ),
-    coverImage: "/img/blogs/hamilelerIcinPilates/hamilelikte-egzersiz.webp",
+    coverImage: `${
+      import.meta.env.BASE_URL
+    }img/blogs/hamilelerIcinPilates/hamilelikte-egzersiz.webp`,
     tags: ["Beslenme", "Danışmanlık", "Kişiye Özel"],
   },
   {
@@ -333,7 +341,7 @@ const blogsData = [
         </p>
       </>
     ),
-    coverImage: "/img/blogs/yoga/doga-yoga.webp",
+    coverImage: `${import.meta.env.BASE_URL}img/blogs/yoga/doga-yoga.webp`,
     tags: ["Beslenme", "Danışmanlık", "Kişiye Özel"],
   },
   {
@@ -360,7 +368,9 @@ const blogsData = [
         </p>
       </>
     ),
-    coverImage: "/img/blogs/swingYoga/swing-yoga.webp",
+    coverImage: `${
+      import.meta.env.BASE_URL
+    }img/blogs/swingYoga/swing-yoga.webp`,
     tags: ["Beslenme", "Danışmanlık", "Kişiye Özel"],
   },
   {
@@ -382,7 +392,7 @@ const blogsData = [
         </p>
       </>
     ),
-    coverImage: "/img/blogs/osteopati/osteopati.webp",
+    coverImage: `${import.meta.env.BASE_URL}img/blogs/osteopati/osteopati.webp`,
     tags: ["Beslenme", "Danışmanlık", "Kişiye Özel"],
   },
   {
@@ -459,7 +469,9 @@ const blogsData = [
         </p>
       </>
     ),
-    coverImage: "/img/blogs/belFitigi/bel-fitigi.webp",
+    coverImage: `${
+      import.meta.env.BASE_URL
+    }img/blogs/belFitigi/bel-fitigi.webp`,
     tags: ["Beslenme", "Danışmanlık", "Kişiye Özel"],
   },
   {
@@ -502,7 +514,9 @@ const blogsData = [
         </p>
       </>
     ),
-    coverImage: "/img/blogs/fonksiyonelEgzersiz/fonksiyonel_egzersiz.webp",
+    coverImage: `${
+      import.meta.env.BASE_URL
+    }img/blogs/fonksiyonelEgzersiz/fonksiyonel_egzersiz.webp`,
     tags: ["Beslenme", "Danışmanlık", "Kişiye Özel"],
   },
   {
@@ -666,7 +680,9 @@ const blogsData = [
         </p>
       </>
     ),
-    coverImage: "/img/blogs/kosu/fonksiyonel_egzersiz.webp",
+    coverImage: `${
+      import.meta.env.BASE_URL
+    }img/blogs/kosu/fonksiyonel_egzersiz.webp`,
     tags: ["Beslenme", "Danışmanlık", "Kişiye Özel"],
   },
   {
@@ -750,7 +766,9 @@ const blogsData = [
         </p>
       </>
     ),
-    coverImage: "/img/blogs/manuelTerapi/manuelTerapi.webp",
+    coverImage: `${
+      import.meta.env.BASE_URL
+    }img/blogs/manuelTerapi/manuelTerapi.webp`,
     tags: ["Beslenme", "Danışmanlık", "Kişiye Özel"],
   },
   {
@@ -833,7 +851,9 @@ const blogsData = [
           çınlaması ortaya çıkabilir.
         </p>
         <img
-          src="/img/blogs/tinnus/Cene-kemigi-blog.webp"
+          src={`${
+            import.meta.env.BASE_URL
+          }img/blogs/tinnus/Cene-kemigi-blog.webp`}
           alt="Çene Kemiği"
           class="max-w-[500px] rounded-tr-3xl rounded-bl-3xl"
           loading="lazy"
@@ -868,7 +888,7 @@ const blogsData = [
         </p>
       </>
     ),
-    coverImage: "/img/blogs/tinnus/Tinnus-blog.webp",
+    coverImage: `${import.meta.env.BASE_URL}img/blogs/tinnus/Tinnus-blog.webp`,
     tags: ["Beslenme", "Danışmanlık", "Kişiye Özel"],
   },
   {
@@ -889,7 +909,9 @@ const blogsData = [
           diş sıkmanın nedenlerini ve tedavi yöntemlerini ele alacağız.
         </p>
         <img
-          src="/img/blogs/disSikmaVeCeneEklemindenGelenSesler/dis-sikma.webp"
+          src={`${
+            import.meta.env.BASE_URL
+          }img/blogs/disSikmaVeCeneEklemindenGelenSesler/dis-sikma.webp`}
           alt="Çene Eklemi"
           class="article-content-image"
           loading="lazy"
@@ -901,7 +923,9 @@ const blogsData = [
         </p>
         <h3>Çene Ekleminin Anatomisi</h3>
         <img
-          src="/img/blogs/disSikmaVeCeneEklemindenGelenSesler/cene-anatomisi.webp"
+          src={`${
+            import.meta.env.BASE_URL
+          }img/blogs/disSikmaVeCeneEklemindenGelenSesler/cene-anatomisi.webp`}
           alt="Çene Anatomisi"
           class="article-content-image"
           loading="lazy"
@@ -924,19 +948,25 @@ const blogsData = [
         <h2>Çene Eklemi Dıştan Kesit</h2>
         <div className="flex w-40 gap-10">
           <img
-            src="/img/blogs/disSikmaVeCeneEklemindenGelenSesler/cene-yandan.webp"
+            src={`${
+              import.meta.env.BASE_URL
+            }img/blogs/disSikmaVeCeneEklemindenGelenSesler/cene-yandan.webp`}
             alt="Yandan Çene Kasları"
             class="article-container-content-image"
             loading="lazy"
           />
           <img
-            src="/img/blogs/disSikmaVeCeneEklemindenGelenSesler/cene-alt-ve-ust.webp"
+            src={`${
+              import.meta.env.BASE_URL
+            }img/blogs/disSikmaVeCeneEklemindenGelenSesler/cene-alt-ve-ust.webp`}
             alt="Alt ve Üst Dil Kasları"
             class="article-container-content-image"
             loading="lazy"
           />
           <img
-            src="/img/blogs/disSikmaVeCeneEklemindenGelenSesler/dis-dil-kaslar-ve-agiz-tabani.webp"
+            src={`${
+              import.meta.env.BASE_URL
+            }img/blogs/disSikmaVeCeneEklemindenGelenSesler/dis-dil-kaslar-ve-agiz-tabani.webp`}
             alt="Dış Dil Kasları ve Ağız Tabani"
             class="article-container-content-image"
             loading="lazy"
@@ -960,7 +990,9 @@ const blogsData = [
         </p>
         <h3>Diş Sıkma (Bruksizm) ve Çene Problemleri</h3>
         <img
-          src="/img/blogs/disSikmaVeCeneEklemindenGelenSesler/bruksizm.webp"
+          src={`${
+            import.meta.env.BASE_URL
+          }img/blogs/disSikmaVeCeneEklemindenGelenSesler/bruksizm.webp`}
           alt="Bruksizm"
           class="article-content-image"
           loading="lazy"
@@ -1060,8 +1092,9 @@ const blogsData = [
         </ul>
       </>
     ),
-    coverImage:
-      "/img/blogs/disSikmaVeCeneEklemindenGelenSesler/cene-alt-ve-ust.webp",
+    coverImage: `${
+      import.meta.env.BASE_URL
+    }img/blogs/disSikmaVeCeneEklemindenGelenSesler/cene-alt-ve-ust.webp`,
     tags: ["Beslenme", "Danışmanlık", "Kişiye Özel"],
   },
   {
@@ -1097,7 +1130,9 @@ const blogsData = [
           uğraşırız.
         </p>
         <img
-          src="/img/blogs/omurgaAgrisi/beyaz-kedi.webp"
+          src={`${
+            import.meta.env.BASE_URL
+          }img/blogs/omurgaAgrisi/beyaz-kedi.webp`}
           alt="Kedi"
           class="article-content-image"
           loading="lazy"
@@ -1115,7 +1150,9 @@ const blogsData = [
           hayat stilimizi kökten değiştiremeyeceğimize göre ne yapabiliriz?
         </p>
         <img
-          src="/img/blogs/omurgaAgrisi/omurga-ilk-insan.webp"
+          src={`${
+            import.meta.env.BASE_URL
+          }img/blogs/omurgaAgrisi/omurga-ilk-insan.webp`}
           alt="İlk İnsan"
           class="article-content-image"
           loading="lazy"
@@ -1130,14 +1167,18 @@ const blogsData = [
           önemli rol oynar.
         </p>
         <img
-          src="/img/blogs/omurgaAgrisi/omurga-kosu.webp"
+          src={`${
+            import.meta.env.BASE_URL
+          }img/blogs/omurgaAgrisi/omurga-kosu.webp`}
           alt="Koşu"
           class="article-content-image"
           loading="lazy"
         />
       </>
     ),
-    coverImage: "/img/blogs/omurgaAgrisi/omurga-agrisi.webp",
+    coverImage: `${
+      import.meta.env.BASE_URL
+    }img/blogs/omurgaAgrisi/omurga-agrisi.webp`,
     tags: ["Beslenme", "Danışmanlık", "Kişiye Özel"],
   },
   {
@@ -1210,7 +1251,9 @@ const blogsData = [
         </ul>
         <div className="flex justify-center">
           <img
-            src="/img/blogs/migren/migren-noktaları.webp"
+            src={`${
+              import.meta.env.BASE_URL
+            }img/blogs/migren/migren-noktaları.webp`}
             alt="Migren Kısımları"
             class="w-[400px]"
             loading="lazy"
@@ -1252,7 +1295,7 @@ const blogsData = [
         </p>
       </>
     ),
-    coverImage: "/img/blogs/migren/migren.webp",
+    coverImage: `${import.meta.env.BASE_URL}img/blogs/migren/migren.webp`,
     tags: ["Beslenme", "Danışmanlık", "Kişiye Özel"],
   },
   {
@@ -1298,7 +1341,9 @@ const blogsData = [
             için, son yedi gün içinde devamlı ağrı hissedilen bölgeler
             işaretlenir. Skor 0 ile 19 arasında olmaktadır.
             <img
-              src="/img/blogs/fibromiyalji/agri-skalasi-1.webp"
+              src={`${
+                import.meta.env.BASE_URL
+              }img/blogs/fibromiyalji/agri-skalasi-1.webp`}
               alt="Ağrı Skalası"
               class="article-content-image"
               loading="lazy"
@@ -1315,13 +1360,17 @@ const blogsData = [
             (maksimum skor: 3) Sonuç olarak SŞS'nin maksimum skoru 12 olur.
             <div className="flex m-5 w-[400px] gap-5">
               <img
-                src="/img/blogs/fibromiyalji/agri-skalasi-2.webp"
+                src={`${
+                  import.meta.env.BASE_URL
+                }img/blogs/fibromiyalji/agri-skalasi-2.webp`}
                 alt="Ağrı Skalası"
                 class="article-content-image"
                 loading="lazy"
               />
               <img
-                src="/img/blogs/fibromiyalji/agri-skalasi-3.webp"
+                src={`${
+                  import.meta.env.BASE_URL
+                }img/blogs/fibromiyalji/agri-skalasi-3.webp`}
                 alt="Ağrı Skalası"
                 class="article-content-image"
                 loading="lazy"
@@ -1341,7 +1390,9 @@ const blogsData = [
           olduğu düşünülmektedir.
         </p>
         <img
-          src="/img/blogs/fibromiyalji/tedavi-sureci.webp"
+          src={`${
+            import.meta.env.BASE_URL
+          }img/blogs/fibromiyalji/tedavi-sureci.webp`}
           alt="Tedavi Süreci"
           class="article-content-image"
           loading="lazy"
@@ -1356,7 +1407,9 @@ const blogsData = [
           egzersiz, fizik tedavi ve bilişsel-davranışsal terapi yer almaktadır.
         </p>
         <img
-          src="/img/blogs/fibromiyalji/fibromiyalji-egzersiz.webp"
+          src={`${
+            import.meta.env.BASE_URL
+          }img/blogs/fibromiyalji/fibromiyalji-egzersiz.webp`}
           alt="Fibromiyalji Egzersiz"
           class="article-content-image"
           loading="lazy"
@@ -1393,7 +1446,9 @@ const blogsData = [
         </p>
       </>
     ),
-    coverImage: "/img/blogs/fibromiyalji/fibromiyalji-egzersiz.webp",
+    coverImage: `${
+      import.meta.env.BASE_URL
+    }img/blogs/fibromiyalji/fibromiyalji-egzersiz.webp`,
     tags: ["Beslenme", "Danışmanlık", "Kişiye Özel"],
   },
   {
@@ -1424,7 +1479,9 @@ const blogsData = [
           açabilir.
         </p>
         <img
-          src="/img/blogs/vestibülerRehabilitasyon/Vestibüler2.webp"
+          src={`${
+            import.meta.env.BASE_URL
+          }img/blogs/vestibülerRehabilitasyon/Vestibüler2.webp`}
           alt="Vestibüler2"
           class="article-content-image"
           loading="lazy"
@@ -1490,7 +1547,9 @@ const blogsData = [
           <li>
             <b>Benign Paroksismal Vestibüler Vertigo(BPVV);</b>
             <img
-              src="/img/blogs/vestibülerRehabilitasyon/Vestibüler3.webp"
+              src={`${
+                import.meta.env.BASE_URL
+              }img/blogs/vestibülerRehabilitasyon/Vestibüler3.webp`}
               alt="Vestibüler3"
               class="article-content-image"
               loading="lazy"
@@ -1511,7 +1570,9 @@ const blogsData = [
           <li>
             <b>Meniere Hastalığı;</b>
             <img
-              src="/img/blogs/vestibülerRehabilitasyon/Vestibüler4.webp"
+              src={`${
+                import.meta.env.BASE_URL
+              }img/blogs/vestibülerRehabilitasyon/Vestibüler4.webp`}
               alt="Vestibüler4"
               class="article-content-image"
               loading="lazy"
@@ -1547,7 +1608,9 @@ const blogsData = [
           <li>
             <b>Göz ve baş koordinasyon;</b>
             <img
-              src="/img/blogs/vestibülerRehabilitasyon/Vestibüler5.webp"
+              src={`${
+                import.meta.env.BASE_URL
+              }img/blogs/vestibülerRehabilitasyon/Vestibüler5.webp`}
               alt="Vestibüler5"
               class="article-content-image"
               loading="lazy"
@@ -1571,7 +1634,9 @@ const blogsData = [
           <li>
             <b>Duyusal Entegrasyon;</b>
             <img
-              src="/img/blogs/vestibülerRehabilitasyon/Vestibüler6.webp"
+              src={`${
+                import.meta.env.BASE_URL
+              }img/blogs/vestibülerRehabilitasyon/Vestibüler6.webp`}
               alt="Vestibüler6"
               class="article-content-image"
               loading="lazy"
@@ -1584,7 +1649,9 @@ const blogsData = [
           <li>
             <b>Fonksiyonel Yürüme Egzersizleri;</b>
             <img
-              src="/img/blogs/vestibülerRehabilitasyon/Vestibüler7.webp"
+              src={`${
+                import.meta.env.BASE_URL
+              }img/blogs/vestibülerRehabilitasyon/Vestibüler7.webp`}
               alt="Vestibüler7"
               class="article-content-image"
               loading="lazy"
@@ -1597,7 +1664,9 @@ const blogsData = [
           <li>
             <b>Habituasyon/Alışkanlık Egzersizleri;</b>
             <img
-              src="/img/blogs/vestibülerRehabilitasyon/Vestibüler8.webp"
+              src={`${
+                import.meta.env.BASE_URL
+              }img/blogs/vestibülerRehabilitasyon/Vestibüler8.webp`}
               alt="Vestibüler8"
               class="article-content-image"
               loading="lazy"
@@ -1610,7 +1679,9 @@ const blogsData = [
           <li>
             <b>Pozisyonel manevralar;</b>
             <img
-              src="/img/blogs/vestibülerRehabilitasyon/Vestibüler9.webp"
+              src={`${
+                import.meta.env.BASE_URL
+              }img/blogs/vestibülerRehabilitasyon/Vestibüler9.webp`}
               alt="Vestibüler9"
               class="article-content-image"
               loading="lazy"
@@ -1639,7 +1710,9 @@ const blogsData = [
         </p>
       </>
     ),
-    coverImage: "/img/blogs/vestibülerRehabilitasyon/Vestibüler1.webp",
+    coverImage: `${
+      import.meta.env.BASE_URL
+    }img/blogs/vestibülerRehabilitasyon/Vestibüler1.webp`,
     tags: ["Beslenme", "Danışmanlık", "Kişiye Özel"],
   },
 ];

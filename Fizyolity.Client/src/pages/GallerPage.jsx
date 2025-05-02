@@ -34,10 +34,12 @@ export default function GalleryPage() {
           <div
             key={index}
             className="cursor-pointer group overflow-hidden rounded-xl"
-            onClick={() => setSelectedImage(`/img/gallery/${img}`)}
+            onClick={() =>
+              setSelectedImage(`${import.meta.env.BASE_URL}img/gallery/${img}`)
+            }
           >
             <img
-              src={`/img/gallery/${img}`}
+              src={`${import.meta.env.BASE_URL}img/gallery/${img}`}
               alt={`Galeri görseli ${index + 1}`}
               className="object-cover w-full h-48 group-hover:scale-105 will-change-transform transition duration-300 ease-in-out"
               loading="lazy"

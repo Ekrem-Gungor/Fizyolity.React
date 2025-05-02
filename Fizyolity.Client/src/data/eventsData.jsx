@@ -41,7 +41,9 @@ const eventsData = [
         </section>
       </>
     ),
-    coverImage: "/img/ourEvents/denge-ve-adaptasyon-kampi/IMG_2937.webp",
+    coverImage: `${
+      import.meta.env.BASE_URL
+    }img/ourEvents/denge-ve-adaptasyon-kampi/IMG_2937.webp`,
     contentImage: [
       "/denge-ve-adaptasyon-kampi/IMG_2944.webp",
       "/denge-ve-adaptasyon-kampi/IMG_3623.webp",
@@ -102,8 +104,9 @@ const eventsData = [
         </p>
       </>
     ),
-    coverImage:
-      "/img/ourEvents/fizyolity-ve-fizyoactive-yetenek-kampi/DSCF0006.webp",
+    coverImage: `${
+      import.meta.env.BASE_URL
+    }img/ourEvents/fizyolity-ve-fizyoactive-yetenek-kampi/DSCF0006.webp`,
     contentImage: [
       "/fizyolity-ve-fizyoactive-yetenek-kampi/DSCF0006.webp",
       "/fizyolity-ve-fizyoactive-yetenek-kampi/DSCF0027.webp",
@@ -169,8 +172,9 @@ const eventsData = [
         </p>
       </>
     ),
-    coverImage:
-      "/img/ourEvents/saglikli-yasam-ve-farkindalik-kampi/DSC_0276.webp",
+    coverImage: `${
+      import.meta.env.BASE_URL
+    }img/ourEvents/saglikli-yasam-ve-farkindalik-kampi/DSC_0276.webp`,
     contentImage: [
       "/saglikli-yasam-ve-farkindalik-kampi/DSC_0289.webp",
       "/saglikli-yasam-ve-farkindalik-kampi/DSC_0313.webp",
@@ -223,7 +227,9 @@ const eventsData = [
         </p>
       </>
     ),
-    coverImage: "/img/ourEvents/sahilde-yoga-etkinlikleri/IMG_3398.webp",
+    coverImage: `${
+      import.meta.env.BASE_URL
+    }img/ourEvents/sahilde-yoga-etkinlikleri/IMG_3398.webp`,
     contentImage: [
       "/sahilde-yoga-etkinlikleri/IMG_3363.webp",
       "/sahilde-yoga-etkinlikleri/IMG_3369.webp",
@@ -273,7 +279,9 @@ const eventsData = [
         </p>
       </>
     ),
-    coverImage: "/img/ourEvents/stresle-mucadele-kampi/DSC_0865.webp",
+    coverImage: `${
+      import.meta.env.BASE_URL
+    }img/ourEvents/stresle-mucadele-kampi/DSC_0865.webp`,
     contentImage: [
       "/stresle-mucadele-kampi/DSC_0802.webp",
       "/stresle-mucadele-kampi/DSC_0817.webp",

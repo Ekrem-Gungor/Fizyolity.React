@@ -42,7 +42,9 @@ export default function EventDetailsPage() {
           className="w-full h-96 object-cover rounded-xl mb-6 shadow will-change-loading"
           onError={(e) => {
             e.currentTarget.onerror = null;
-            e.currentTarget.src = "/img/blogs/placeholder.webp";
+            e.currentTarget.src = `${
+              import.meta.env.BASE_URL
+            }img/blogs/placeholder.webp`;
           }}
           loading="lazy"
           decoding="async"
@@ -75,10 +77,14 @@ export default function EventDetailsPage() {
             <div
               key={index}
               className="cursor-pointer group overflow-hidden rounded-xl"
-              onClick={() => setSelectedImage(`/img/ourEvents/${img}`)}
+              onClick={() =>
+                setSelectedImage(
+                  `${import.meta.env.BASE_URL}img/ourEvents/${img}`
+                )
+              }
             >
               <img
-                src={`/img/ourEvents${img}`}
+                src={`${import.meta.env.BASE_URL}img/ourEvents${img}`}
                 alt={`Galeri görseli ${index + 1}`}
                 className="object-cover w-full h-48 group-hover:scale-105 will-change-transform transition duration-300 ease-in-out"
                 loading="lazy"
@@ -96,7 +102,7 @@ export default function EventDetailsPage() {
             >
               <video controls width="280" preload="metadata">
                 <source
-                  src={`/img/ourEvents${vid}`}
+                  src={`${import.meta.env.BASE_URL}img/ourEvents${vid}`}
                   alt={`Galeri video ${index + 1}`}
                   type="video/webm"
                   loading="lazy"

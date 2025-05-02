@@ -19,7 +19,9 @@ const BlogCard = React.memo(({ blog }) => {
           onLoad={() => setIsImageLoaded(true)}
           onError={(e) => {
             e.currentTarget.onerror = null;
-            e.currentTarget.src = "/img/blogs/placeholder.webp";
+            e.currentTarget.src = `${
+              import.meta.env.BASE_URL
+            }img/blogs/placeholder.webp`;
             setIsImageLoaded(true);
           }}
           className={`w-full h-48 object-cover transition-opacity duration-300 ${

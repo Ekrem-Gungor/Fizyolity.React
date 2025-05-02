@@ -54,7 +54,11 @@ export default function Header() {
   return (
     <header
       className="relative h-screen flex flex-col bg-cover bg-center"
-      style={{ backgroundImage: "url('/img/header/ana-ekran.webp')" }}
+      style={{
+        backgroundImage: `url('${
+          import.meta.env.BASE_URL
+        }img/header/ana-ekran.webp')`,
+      }}
     >
       {/* Navbar */}
       <nav

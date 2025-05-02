@@ -39,7 +39,7 @@ export default function AboutUsSection() {
           {/* Image */}
           <div className="w-full md:w-1/2 relative">
             <img
-              src="/img/gallery/ekip-fotosu.webp"
+              src={`${import.meta.env.BASE_URL}img/gallery/ekip-fotosu.webp`}
               alt="Ekibimiz"
               loading="lazy"
               className="max-w-full h-auto mx-auto relative z-10 rounded-xl"
