@@ -15,7 +15,7 @@ export default function EventsSection() {
           </h2>
 
           <div className="grid md:grid-cols-3 gap-6">
-            {eventsData.map((event, idx) => (
+            {eventsData.slice(0, 3).map((event, idx) => (
               <div
                 key={idx}
                 className="bg-white/70 border border-gray-200 p-6 rounded-xl shadow-md hover:bg-transparent hover:text-white/90 hover:shadow-lg transition duration-300 easy-in-out"
@@ -24,9 +24,9 @@ export default function EventsSection() {
                   <RiCalendarCheckLine className="w-14 h-14 p-2 text-white bg-fizyolity rounded-full border border-white/60" />
                 </div>
                 <h4 className="text-xl font-semibold mb-2">{event.title}</h4>
-                <p className="text-sm mb-4">{event.description}</p>
+                <p className="text-sm mb-4">{event.excerpt}</p>
                 <Link
-                  to={event.link}
+                  to={`/event/details/${event.slug}`}
                   className="inline-flex font-semibold items-center hover:underline font-medium text-sm"
                 >
                   Ayrıntılar <RiArrowRightLine className="ml-1" size={16} />

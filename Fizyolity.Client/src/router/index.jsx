@@ -8,6 +8,8 @@ import ServicesPage from "@/pages/ServicesPage";
 import BlogsPage from "@/pages/BlogsPage";
 import BlogDetailsPage from "@/pages/BlogDetailsPage";
 import GalleryPage from "@/pages/GallerPage";
+import EventsPage from "@/pages/EventsPage";
+import EventDetailsPage from "@/pages/EventDetailsPage";
 
 export const ROUTES = {
   HOME: "/",
@@ -61,7 +63,11 @@ const router = createBrowserRouter([
       },
       {
         path: "events",
-        element: <EventsSection />,
+        element: <EventsPage />,
+      },
+      {
+        path: "event/details/:slug",
+        element: <EventDetailsPage />,
       },
     ],
   },

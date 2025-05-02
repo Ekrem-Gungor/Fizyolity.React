@@ -32,13 +32,11 @@ export default function BlogDetailsPage() {
         alt={blog.title}
         className="w-full h-96 object-cover rounded-xl mb-6 shadow will-change-loading"
         onError={(e) => {
-          console.log(
-            `Resim yüklenemedi (${blog.coverImage}), placeholder gösterilecek!`
-          );
           e.currentTarget.onerror = null;
           e.currentTarget.src = "/img/blogs/placeholder.webp";
         }}
         loading="lazy"
+        decoding="async"
       />
 
       <h1 className="text-4xl font-bold text-gray-800 mb-4">{blog.title}</h1>

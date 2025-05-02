@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { RiArrowRightLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
+import React from "react";
 
 const ServiceCard = ({ service }) => {
   return (

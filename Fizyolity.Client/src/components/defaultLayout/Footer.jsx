@@ -25,6 +25,8 @@ export default function Footer() {
       navigate(`/?section=${sectionId}`);
     }
   };
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-zinc-800 text-white py-10">
       <div className="container mx-auto px-4">
@@ -164,7 +166,7 @@ export default function Footer() {
               Ekrem Güngör
             </Link>
           </p>
-          <p>&copy; 2025 Tüm Hakları Saklıdır.</p>
+          <p>&copy; {currentYear} Tüm Hakları Saklıdır.</p>
         </div>
       </div>
     </footer>
