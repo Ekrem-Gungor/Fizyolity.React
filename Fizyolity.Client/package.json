@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/Ekrem-Gungor/Fizyolity.React",
+  "homepage": "https://ekrem-gungor.github.io/Fizyolity.React",
   "scripts": {
     "dev": "vite",
     "lint": "eslint .",
