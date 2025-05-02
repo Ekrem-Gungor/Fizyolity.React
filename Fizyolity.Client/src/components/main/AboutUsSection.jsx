@@ -1,5 +1,4 @@
 import Head from "../defaultLayout/Head";
-import ekipFoto from "@/assets/images/ekip-fotosu.webp";
 
 export default function AboutUsSection() {
   return (
@@ -40,7 +39,7 @@ export default function AboutUsSection() {
           {/* Image */}
           <div className="w-full md:w-1/2 relative">
             <img
-              src={ekipFoto}
+              src="/img/gallery/ekip-fotosu.webp"
               alt="Ekibimiz"
               loading="lazy"
               className="max-w-full h-auto mx-auto relative z-10 rounded-xl"
